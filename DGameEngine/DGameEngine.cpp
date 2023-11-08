@@ -19,9 +19,7 @@ void GameEngine::render() {
   
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-
     //Update camera look at position
-
     gluLookAt( mainCamera.position.x, mainCamera.position.y, mainCamera.position.z,
         mainCamera.orientation.x, mainCamera.orientation.y, mainCamera.orientation.z,
         mainCamera.up.x, mainCamera.up.y, mainCamera.up.z);  

@@ -4,6 +4,9 @@
 #include "Camera.h"
 #include "CubeImmediateMode.h"
 #include "Scene.h"
+#include "MeshLoader.h"
+#include "Mesh.h"
+
 
 class GameEngine
 {
@@ -12,7 +15,8 @@ public:
 	GameEngine();
 	~GameEngine();
 
-	Camera mainCamera;
+	Camera mainCamera;  
+	MeshLoader meshLoader;
 	vector<shared_ptr<Scene>> scenes;
 
 	void CreateScene(const string name) {
@@ -55,7 +59,7 @@ public:
 				glVertex3i(-grid_size, 0, i);
 				glVertex3i(grid_size, 0, i);
 			}
-
+      
 			if (xy_plane) {
 				//XY plane
 				glVertex2i(i, -grid_size);
