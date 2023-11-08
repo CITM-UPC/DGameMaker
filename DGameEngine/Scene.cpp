@@ -3,7 +3,7 @@
 #include "ComponentMesh.h"
 #include "ComponentMaterial.h"
 
-Scene::Scene() {
+Scene::Scene(string name) : name(name) {
 
 }
 
@@ -15,8 +15,8 @@ void Scene::init() {
 	//CreateGameObject("BakerHouse.fbx", "Baker_house.png");
 }
 
-void Scene::postUpdate() {
-	for (auto gObj : mGameObjects)
+void Scene::GameObjectsUpdate() {
+	for (auto gObj : gameObjects)
 	{
 		gObj->UpdateGameObj();
 	}
@@ -85,5 +85,5 @@ void Scene::CreateGameObject(const string path, shared_ptr<Mesh>&& mesh, shared_
 
 void Scene::AddGameObj(shared_ptr<GameObject> gameObj) {
 
-	mGameObjects.push_back(gameObj);
+	gameObjects.push_back(gameObj);
 }

@@ -12,17 +12,18 @@ class Texture2D;
 class Scene
 {
 public:
-	Scene();
+	Scene(string name);
 	~Scene();
 	
 	void init();
-	void postUpdate();
+	void GameObjectsUpdate();
 
-	void CreateGameObject(const string meshPath, const string texturePath, mat4 transform = glm::identity<mat4>());
+	//void CreateGameObject(const string meshPath, const string texturePath, mat4 transform = glm::identity<mat4>());
 
 	void CreateGameObject(const string path, shared_ptr<Mesh>&& mesh, shared_ptr<Texture2D>&& t);
 
 	vector<shared_ptr<GameObject>> mGameObjects;
+	string name;
 
 	int numGobj = 0;
 
