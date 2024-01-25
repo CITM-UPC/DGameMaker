@@ -99,26 +99,26 @@ This is a project for CITM where you will be able to find the basics for a game 
 
 ### Tasks by members
 
-#### Francisco Ferrerós
+- Francisco Ferrerós
 
-- Editor Project Organitzationm (UI)
-- Console ImGUI
-- Project ImGUI
-- Scene ImGUI
-- Settings ImGUI
-- GameObject Trees & Components
-- Transform Component
-- Camera
+  - Editor Project Organitzationm (UI)
+  - Console ImGUI
+  - Project ImGUI
+  - Scene ImGUI
+  - Settings ImGUI
+  - GameObject Trees & Components
+  - Transform Component
+  - Camera
 
-#### Jan Neto Llorens
+- Jan Neto Llorens:
 
-- GameObject Trees & Components
-- AABB
-- Mesh Component
-- Texture Component
-- Hierarchy ImGUI
-- Inspector ImGUI
-- TextEditor ImGUI
+  - GameObject Trees & Components
+  - AABB
+  - Mesh Component
+  - Texture Component
+  - Hierarchy ImGUI
+  - Inspector ImGUI
+  - TextEditor ImGUI
 
 
 
