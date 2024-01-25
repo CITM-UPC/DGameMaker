@@ -4,6 +4,8 @@ The engine with the will of D.
 
 Check our full project page for more info about DGameEngine [GitHub Link](https://github.com/CITM-UPC/DGameMaker) 
 
+This is a project for CITM where you will be able to find the basics for a game engine to be useful and a highlevel system (scripting).
+
 ### Members
 
 - Francisco Ferrerós Puigmartí --> [kikofp02](https://github.com/kikofp02)
@@ -93,6 +95,30 @@ Check our full project page for more info about DGameEngine [GitHub Link](https:
 - GitHub repository link
 - Contact us, link to our organization
 
+### Highlevel system - Scripting
+
+### Tasks by members
+
+#### Francisco Ferrerós
+
+- Editor Project Organitzationm (UI)
+- Console ImGUI
+- Project ImGUI
+- Scene ImGUI
+- Settings ImGUI
+- GameObject Trees & Components
+- Transform Component
+- Camera
+
+#### Jan Neto Llorens
+
+- GameObject Trees & Components
+- AABB
+- Mesh Component
+- Texture Component
+- Hierarchy ImGUI
+- Inspector ImGUI
+- TextEditor ImGUI
 
 
 
