@@ -97,9 +97,11 @@ This is a project for CITM where you will be able to find the basics for a game 
 
 ### Highlevel system - Scripting
 
+- Explain in detail the scripting system - TODO
+
 ### Tasks by members
 
-- Francisco Ferrerós
+- Francisco Ferrerós:
 
   - Editor Project Organitzationm (UI)
   - Console ImGUI
