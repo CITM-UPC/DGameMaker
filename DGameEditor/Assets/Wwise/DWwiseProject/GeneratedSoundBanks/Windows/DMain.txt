@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	603961383	BCG_Music_OP			\Default Work Unit\BCG_Music_OP	
+	620738955	BCG_Music_LA			\Default Work Unit\BCG_Music_LA	
+	764788459	SFX_HornyBonk			\Default Work Unit\SFX_HornyBonk	
+	1419438347	SFX_Wololo_AOE			\Default Work Unit\SFX_Wololo_AOE	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	246255673	sound-9	C:\Users\janne\OneDrive\Escritorio\DGameMaker\DGameEditor\Assets\Wwise\DWwiseProject\.cache\Windows\SFX\sound-9_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\sound-9		66912
+	563596225	Bonk-sound-effect-cheems	C:\Users\janne\OneDrive\Escritorio\DGameMaker\DGameEditor\Assets\Wwise\DWwiseProject\.cache\Windows\SFX\Bonk-sound-effect-cheems_1C5BCA9F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bonk-sound-effect-cheems		135368
+	579486046	One-Piece-OST_-OVERTAKEN「Drums-of-Liberation-Music」_-EPIC-VERSION	C:\Users\janne\OneDrive\Escritorio\DGameMaker\DGameEditor\Assets\Wwise\DWwiseProject\.cache\Windows\SFX\One-Piece-OST_-OVERTAKEN「Drums-of-Liberation-Music」_-EPIC-VERSION_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\One-Piece-OST_-OVERTAKEN「Drums-of-Liberation-Music」_-EPIC-VERSION		40779872
+	715081575	Lost-Ark「Menu-Theme」by-Brian-Tyler	C:\Users\janne\OneDrive\Escritorio\DGameMaker\DGameEditor\Assets\Wwise\DWwiseProject\.cache\Windows\SFX\Lost-Ark「Menu-Theme」by-Brian-Tyler_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lost-Ark「Menu-Theme」by-Brian-Tyler		40697952
+

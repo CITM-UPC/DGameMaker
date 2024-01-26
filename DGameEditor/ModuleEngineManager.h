@@ -3,6 +3,7 @@
 #include "Module.h"
 
 #include "..\DGameEngine\DGameEngine.h"
+#include "..\DAudioEngine\AudioEngine.h"
 
 struct EngineScene
 {
@@ -47,6 +48,7 @@ public:
 
 private:
     GameEngine engine;
+    //AudioEngine audioEngine;
     float camSpeed = 0.1;
 };
 

@@ -17,7 +17,6 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -41,39 +40,36 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Label="Shared" >
+  <ImportGroup Label="Shared">
   </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -108,11 +104,21 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)Wwise\SDK\include\Win32;$(SolutionDir)Wwise\SDK\include\;$(SolutionDir)vcpkg\installed\x64-windows\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>$(SolutionDir)Wwise\SDK\include\Win32;$(SolutionDir)Wwise\SDK\include\;$(SolutionDir)vcpkg\installed\x64-windows\include\;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>CommunicationCentral.lib;AkSoundEngine.lib;AkMemoryMgr.lib;AkStreamMgr.lib;AkMusicEngine.lib;AkSpatialAudio.lib;AkAudioInputSource.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)Wwise\SDK\Debug\lib\;$(SolutionDir)vcpkg\installed\x64-windows\lib\manual-link;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -120,8 +126,11 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;AK_DISABLE_MEMDEBUG;AK_OPTIMIZED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(SolutionDir)Wwise\SDK\include\Win32;$(SolutionDir)Wwise\SDK\include\;$(SolutionDir)vcpkg\installed\x64-windows\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,9 +138,46 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>AkSoundEngine.lib;AkMemoryMgr.lib;AkStreamMgr.lib;AkMusicEngine.lib;AkSpatialAudio.lib;AkAudioInputSource.lib;ws2_32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vcpkg\installed\x64-windows\lib\;$(SolutionDir)vcpkg\installed\x64-windows\lib\manual-link;$(SolutionDir)Wwise\SDK\Release\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
-
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\DGameEditor\Assets\Wwise\DWwiseProject\GeneratedSoundBanks\Wwise_IDs.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Common\AkDefaultLowLevelIODispatcher.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Common\AkFileHelpersBase.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Common\AkFileLocationBase.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Common\AkFilePackage.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Common\AkFilePackageLowLevelIO.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Common\AkFilePackageLowLevelIODeferred.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Common\AkFilePackageLUT.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Common\AkGeneratedSoundBanksResolver.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Common\AkJobWorkerMgr.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Common\AkMultipleFileLocation.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Common\AkPlatformProfilerHooks.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Win32\AkDefaultIOHookDeferred.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Win32\AkFileHelpers.h" />
+    <ClInclude Include="..\Wwise\SDK\include\Win32\stdafx.h" />
+    <ClInclude Include="AudioEngine.h" />
+    <ClInclude Include="AudioUtility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Wwise\SDK\include\Common\AkDefaultLowLevelIODispatcher.cpp" />
+    <ClCompile Include="..\Wwise\SDK\include\Common\AkFileLocationBase.cpp" />
+    <ClCompile Include="..\Wwise\SDK\include\Common\AkFilePackage.cpp" />
+    <ClCompile Include="..\Wwise\SDK\include\Common\AkFilePackageLUT.cpp" />
+    <ClCompile Include="..\Wwise\SDK\include\Common\AkGeneratedSoundBanksResolver.cpp" />
+    <ClCompile Include="..\Wwise\SDK\include\Common\AkJobWorkerMgr.cpp" />
+    <ClCompile Include="..\Wwise\SDK\include\Common\AkMultipleFileLocation.cpp" />
+    <ClCompile Include="..\Wwise\SDK\include\Common\AkPlatformProfilerHookStubs.cpp" />
+    <ClCompile Include="..\Wwise\SDK\include\Win32\AkDefaultIOHookDeferred.cpp" />
+    <ClCompile Include="..\Wwise\SDK\include\Win32\stdafx.cpp" />
+    <ClCompile Include="AudioEngine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Wwise\SDK\include\Common\AkFilePackageLowLevelIO.inl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
