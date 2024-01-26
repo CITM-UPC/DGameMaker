@@ -34,6 +34,9 @@
     <ClCompile Include="CubeImmediateMode.cpp">
       <Filter>Source\Utils\Imported_Utils</Filter>
     </ClCompile>
+    <ClCompile Include="Move.cpp">
+      <Filter>TestTextEditor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Components.h">
@@ -87,6 +90,12 @@
     <ClInclude Include="resource.h">
       <Filter>Source\Utils\Imported_Utils</Filter>
     </ClInclude>
+    <ClInclude Include="Move.h">
+      <Filter>TestTextEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="DScripts.h">
+      <Filter>TestTextEditor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DGameEngine.rc" />
@@ -112,6 +121,9 @@
     </Filter>
     <Filter Include="Source\Utils\Imported_Utils">
       <UniqueIdentifier>{90894e21-5b69-4b2f-a765-a7a2f2b75f00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestTextEditor">
+      <UniqueIdentifier>{145d78d6-de0b-4ff8-be6a-0fc2aade6a2c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

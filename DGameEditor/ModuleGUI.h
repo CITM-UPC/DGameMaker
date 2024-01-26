@@ -10,6 +10,7 @@
 #include "WindowConsole.h"
 #include "WindowSettings.h"
 #include "WindowAbout.h"
+#include "WindowScript.h"
 
 // GUI Windows
 class WindowScene;
@@ -19,6 +20,7 @@ class WindowProject;
 class WindowConsole;
 class WindowSettings;
 class WindowAbout;
+class WindowScript;
 
 struct ImGuiStyleBackup
 {
@@ -36,6 +38,7 @@ public:
 	WindowConsole* w_console;
 	WindowSettings* w_settings;
 	WindowAbout* w_about;
+	WindowScript* w_script;
 
 public:
 	ModuleGUI(bool startEnabled);

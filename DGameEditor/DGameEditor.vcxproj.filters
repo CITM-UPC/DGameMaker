@@ -22,6 +22,9 @@
     <Filter Include="Sources\Utils">
       <UniqueIdentifier>{cbe322ab-3b9c-445b-b4eb-1c378dce628e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sources\Utils\TextEditor">
+      <UniqueIdentifier>{e2f6c5f9-36d6-4dbc-a75e-5cfa25f2fe90}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ModuleEvents.cpp">
@@ -67,6 +70,12 @@
       <Filter>Sources\Modules\GUI\GUI Elements\GUI Windows</Filter>
     </ClCompile>
     <ClCompile Include="WindowAbout.cpp">
+      <Filter>Sources\Modules\GUI\GUI Elements\GUI Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="TextEditor.cpp">
+      <Filter>Sources\Utils\TextEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowScript.cpp">
       <Filter>Sources\Modules\GUI\GUI Elements\GUI Windows</Filter>
     </ClCompile>
   </ItemGroup>
@@ -127,6 +136,12 @@
     </ClInclude>
     <ClInclude Include="DualStreamBuffering.h">
       <Filter>Sources\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="TextEditor.h">
+      <Filter>Sources\Utils\TextEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowScript.h">
+      <Filter>Sources\Modules\GUI\GUI Elements\GUI Windows</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

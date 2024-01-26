@@ -28,10 +28,12 @@
     <ClCompile Include="DGameEngine.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Move.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Texture2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DScripts.h" />
     <ClInclude Include="ComponentCamera.h" />
     <ClInclude Include="BBox.hpp" />
     <ClInclude Include="ComponentMaterial.h" />
@@ -46,6 +48,7 @@
     <ClInclude Include="Graphic.h" />
     <ClInclude Include="Loaders.h" />
     <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Move.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Texture2D.h" />
