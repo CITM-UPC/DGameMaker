@@ -82,8 +82,16 @@ static bool MenuBarUpdate() {
 
             ImGui::Separator();
 
-            if (ImGui::MenuItem("Play", "Ctrl+P", false, false)) {          // Temporarly disabled because not implemented (..., false, false)
-                // Code to execute when "Play" is selected
+            bool play = app->engineManager->GetEngine()->GetState();
+            if (ImGui::MenuItem("Play", "Ctrl+P", &play)) {          // Temporarly disabled because not implemented (..., false, false)
+                if (!play) {
+                    app->engineManager->GetEngine()->Stop();
+                    cout << "Engine state: PAUSED" << endl;
+                }
+                else {
+                    app->engineManager->GetEngine()->Play();
+                    cout << "Engine state: RUNING" << endl;
+                }
             }
             if (ImGui::MenuItem("Pause", "Ctrl+Shift+P", false, false)) {          // Temporarly disabled because not implemented (..., false, false)
                 // Code to execute when "Pause" is selected

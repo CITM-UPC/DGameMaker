@@ -25,7 +25,7 @@ void Scene::GameObjectsUpdate() {
 
 void Scene::EmptyGameObj() {
 
-    unique_ptr<GameObject> gameObj;
+    unique_ptr<GameObject> gameObj = make_unique<GameObject>();
 
 	string meshName = "GameObject";
 	int currentCopies = NameAvailability(meshName);
@@ -35,6 +35,10 @@ void Scene::EmptyGameObj() {
 		meshName.append(copiesToString);
 		meshName.append(")");
 	}
+    gameObj.get()->SetName(meshName);
+
+    int currentIndex = IndexAvailability();
+    gameObj->SetIndex(currentIndex);
 
 	gameObjects.push_back(move(gameObj));
 }
@@ -161,4 +165,15 @@ int Scene::IndexAvailability() {
         if (gObj->GetIndex() == count) { count++; }
     }
     return count;
+}
+
+GameObject* Scene::FindWithName(const char* name) {
+    GameObject* gobj = nullptr;
+
+    for (const auto& vector : gameObjects) {
+        if (vector->GetName().find(name) != std::string::npos) {
+            gobj = vector.get();
+        }
+    }
+    return gobj;
 }

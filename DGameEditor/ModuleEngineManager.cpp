@@ -30,9 +30,13 @@ void ModuleEngineManager::Awake() {
     engine.CreateScene("Scene1");
     sel_Scene.index = 0;
     sel_Scene.scene = engine.GetSceneAtIndex(sel_Scene.index);
-    sel_Scene.scene->loadFromFile("Street environment_V01.fbx", sel_Scene.scene);
+    sel_Scene.scene->loadFromFile("StreetEnvironment.fbx", sel_Scene.scene);
+
+    sel_Scene.scene->EmptyGameObj();
+    sel_Scene.scene->gameObjects.back().get()->SetName("Spatial_Sound");
+
+
     sel_GameObject.gameObject = sel_Scene.scene->gameObjects.front().get();
-    sel_GameObject.gameObject->GetComponent<ComponentTransform>()->setRotation(vec3(-90, 0, 0));
 }
 
 void ModuleEngineManager::Start() {
@@ -58,6 +62,17 @@ bool ModuleEngineManager::PreUpdate() {
 bool ModuleEngineManager::Update(duration<double> dt) {
     
     MainCameraUpdate();
+
+    double radius = 0.5;
+    double speed = 1;
+
+    double timeInSeconds = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::steady_clock::now().time_since_epoch()).count();
+
+    double x = radius * std::cos(speed * timeInSeconds);
+    double y = radius * std::sin(speed * timeInSeconds);
+
+    GameObject* go = sel_Scene.scene.get()->FindWithName("Spatial_Sound");
+    go->GetComponent<ComponentTransform>()->translate({ x, 0, y }, ComponentTransform::Space::GLOBAL);
             
     return true;
 }

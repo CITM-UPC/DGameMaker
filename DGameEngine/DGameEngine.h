@@ -41,7 +41,22 @@ public:
 
 	void render();
 
+private:
+	bool play_state = false;
+
 public:
+
+	void Play() {
+		play_state = true;
+	}
+
+	void Stop() {
+		play_state = false;
+	}
+
+	bool GetState() {
+		return play_state;
+	}
 
 	void drawGrid(int grid_size, int grid_step, bool xy_plane = true, bool xz_plane = true, bool zy_plane = true) {
 		glLineWidth(1.0);

@@ -35,6 +35,8 @@ public:
 	int GetObjNum() { return gameObjects.size(); }
 	int GetAvgObjNum() { return GetObjNum() * 0.5; }
 
+	GameObject* FindWithName(const char* name);
+
 private:
 
 
