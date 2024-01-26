@@ -48,7 +48,7 @@ public:
 
 private:
     GameEngine engine;
-    AudioEngine audioEngine;
+    //AudioEngine audioEngine;
     float camSpeed = 0.1;
 };
 

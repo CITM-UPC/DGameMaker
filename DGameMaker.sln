@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DGameEditor", "DGameEditor\DGameEditor.vcxproj", "{B2D581F1-9247-41ED-9E9D-45E770A5A52F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D3599C09-DE1D-40C2-9730-7CAABFCBCEC9} = {D3599C09-DE1D-40C2-9730-7CAABFCBCEC9}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DGameEngine", "DGameEngine\DGameEngine.vcxproj", "{105785DE-7F01-47A4-81A4-AC2C207FF4F3}"
 EndProject
