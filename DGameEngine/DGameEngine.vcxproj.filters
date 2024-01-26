@@ -34,6 +34,12 @@
     <ClCompile Include="CubeImmediateMode.cpp">
       <Filter>Source\Utils\Imported_Utils</Filter>
     </ClCompile>
+    <ClCompile Include="ComponentScript.cpp">
+      <Filter>Source\Object_Clases\GameObject\GO_Component\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Script.cpp">
+      <Filter>Source\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Components.h">
@@ -86,6 +92,12 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Source\Utils\Imported_Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentScript.h">
+      <Filter>Source\Object_Clases\GameObject\GO_Component\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Script.h">
+      <Filter>Source\Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

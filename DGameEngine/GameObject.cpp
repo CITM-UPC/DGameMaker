@@ -4,6 +4,7 @@
 #include "ComponentMaterial.h"
 #include "ComponentCamera.h"
 #include "ComponentTransform.h"
+#include "ComponentScript.h"
 #include <glm/ext/matrix_transform.hpp>
 
 GameObject::GameObject() {
@@ -54,6 +55,10 @@ void GameObject::AddComponent(Component::Type component) {
 		break;
 	case Component::Type::CAMERA:
 		ptr = move(std::make_unique<ComponentCamera>());
+		break;
+	case Component::Type::SCRIPT:
+		ptr = move(std::make_unique<ComponentScript>());
+		ptr.get()->owner = (shared_from_this());
 		break;
 	default:
 		cout << "Can't assign wrong component type" << endl;

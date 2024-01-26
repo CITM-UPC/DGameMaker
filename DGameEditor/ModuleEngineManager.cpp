@@ -1,6 +1,8 @@
 #include "ModuleEngineManager.h"
 #include "ComponentCamera.h"
 #include "ComponentTransform.h"
+#include "ComponentScript.h"
+#include "..\DGameScripting\Movement.h"
 #include "App.h"
 
 #include <glm/gtx/euler_angles.hpp>
@@ -33,6 +35,11 @@ void ModuleEngineManager::Awake() {
     sel_Scene.scene->loadFromFile("Street environment_V01.fbx", sel_Scene.scene);
     sel_GameObject.gameObject = sel_Scene.scene->gameObjects.front().get();
     sel_GameObject.gameObject->GetComponent<ComponentTransform>()->setRotation(vec3(-90, 0, 0));
+
+    sel_Scene.scene->EmptyGameObj();
+    sel_Scene.scene->gameObjects.back().get()->AddComponent(Component::SCRIPT);
+    void* (*Creator)() = (void* (*)())GetProcAddress(app->scripts_dll, std::string("Create" + std::string(name)).data());
+    sel_Scene.scene->gameObjects.back().get()->GetComponent<ComponentScript>()->LoadData(Creator);
 }
 
 void ModuleEngineManager::Start() {
