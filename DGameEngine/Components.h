@@ -11,8 +11,11 @@ public:
 		TRANSFORM,
 		MESH,
 		MATERIAL,
-		CAMERA
+		CAMERA,
+		SCRIPT
 	};
+
+	std::shared_ptr<GameObject> owner;
 
 	Component() : isActive(true) {}
 	Component(Component&& c) noexcept : 

@@ -3,6 +3,7 @@
 #include "Module.h"
 
 #include "..\DGameEngine\DGameEngine.h"
+#include "..\DGameScripting\DGameScripting.h"
 
 struct EngineScene
 {

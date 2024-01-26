@@ -1,5 +1,7 @@
 #include "ModuleEngineManager.h"
 #include "ComponentCamera.h"
+#include "ComponentScript.h"
+#include "..\DGameScripting\MoveScript.h"
 #include "ComponentTransform.h"
 #include "App.h"
 
@@ -33,6 +35,10 @@ void ModuleEngineManager::Awake() {
     sel_Scene.scene->loadFromFile("Street environment_V01.fbx", sel_Scene.scene);
     sel_GameObject.gameObject = sel_Scene.scene->gameObjects.front().get();
     sel_GameObject.gameObject->GetComponent<ComponentTransform>()->setRotation(vec3(-90, 0, 0));
+
+    sel_Scene.scene->EmptyGameObj();
+    sel_Scene.scene->gameObjects.back().get()->AddComponent(Component::SCRIPT);
+    sel_Scene.scene->gameObjects.back().get()->GetComponent<ComponentScript>()->Bind<MoveScript>();
 }
 
 void ModuleEngineManager::Start() {
