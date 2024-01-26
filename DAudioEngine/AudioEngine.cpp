@@ -83,7 +83,7 @@ bool AudioEngine::WwiseInit() {
 		return false;
 	}
 
-	g_lowLevelIO.SetBasePath(AKTEXT("Assets\\wwise\\WwiseProject\\GeneratedSoundBanks\\Windows"));
+	g_lowLevelIO.SetBasePath(AKTEXT("Assets\\Wwise\\DWwiseProject\\GeneratedSoundBanks\\Windows"));
 	AK::StreamMgr::SetCurrentLanguage(AKTEXT("English(us)"));
 
 	//bank init
