@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DGameEditor", "DGameEditor\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DGameEngine", "DGameEngine\DGameEngine.vcxproj", "{105785DE-7F01-47A4-81A4-AC2C207FF4F3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DAudioEngine", "DAudioEngine\DAudioEngine.vcxproj", "{D3599C09-DE1D-40C2-9730-7CAABFCBCEC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{105785DE-7F01-47A4-81A4-AC2C207FF4F3}.Release|x64.Build.0 = Release|x64
 		{105785DE-7F01-47A4-81A4-AC2C207FF4F3}.Release|x86.ActiveCfg = Release|Win32
 		{105785DE-7F01-47A4-81A4-AC2C207FF4F3}.Release|x86.Build.0 = Release|Win32
+		{D3599C09-DE1D-40C2-9730-7CAABFCBCEC9}.Debug|x64.ActiveCfg = Debug|x64
+		{D3599C09-DE1D-40C2-9730-7CAABFCBCEC9}.Debug|x64.Build.0 = Debug|x64
+		{D3599C09-DE1D-40C2-9730-7CAABFCBCEC9}.Debug|x86.ActiveCfg = Debug|Win32
+		{D3599C09-DE1D-40C2-9730-7CAABFCBCEC9}.Debug|x86.Build.0 = Debug|Win32
+		{D3599C09-DE1D-40C2-9730-7CAABFCBCEC9}.Release|x64.ActiveCfg = Release|x64
+		{D3599C09-DE1D-40C2-9730-7CAABFCBCEC9}.Release|x64.Build.0 = Release|x64
+		{D3599C09-DE1D-40C2-9730-7CAABFCBCEC9}.Release|x86.ActiveCfg = Release|Win32
+		{D3599C09-DE1D-40C2-9730-7CAABFCBCEC9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
